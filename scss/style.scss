@@ -1,0 +1,318 @@
+/* Style for Woola
+ * Created by Perry Du
+ * I love this project! */
+
+// Lovely import this dependencies...
+@import 'bourbon/bourbon';
+
+// Buttons
+@mixin make-button ($main-color, $font-color) {
+  padding: 4px 12px;
+  color: $font-color;
+  border: 1px solid $main-color - 30;
+  border-bottom: 1px solid $main-color - 50;
+  border-radius: 4px;
+  box-shadow: $main-color - 6 0 1px inset;
+  @include linear-gradient($main-color, $main-color - 15);
+
+  &:hover {
+    @include linear-gradient($main-color - 10, $main-color - 25);
+  }
+
+  &:active {
+    box-shadow: $main-color - 55 0 2px 5px inset;
+  }
+}
+
+.button-default {
+  @include make-button(#F9F9F9, #333333);
+}
+
+.button-normal {
+  @include make-button(#85D868, #FFFFFF);
+}
+
+.button-danger {
+  @include make-button(#DB5E58, #FFFFFF);
+}
+
+// Messages
+@mixin make-message ($main-color) {
+  color: $main-color;
+  border: 3px solid $main-color;
+}
+
+.message {
+  display: block;
+  padding: 5px 10px;
+}
+
+.message-error {
+  @include make-message(#EE6644);
+}
+
+.message-success {
+  @include make-message(#62AF3A);
+}
+
+// Global string
+$pt-sans: "PT Sans", $helvetica;
+$pt-serif: "PT Serif", $georgia;
+$main-nav-color: #DBDBDB;
+
+// BOX SIZEING ALL
+* {
+  @include box-sizing(border-box);
+}
+
+// Clearfix
+.clearfix {
+  @include clearfix;
+}
+
+// Wrap all the stuff
+#wrapper {
+  max-width: 1024px;
+  margin: 70px auto;
+  font-family: $pt-sans;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+// Top Menu
+nav#top-nav {
+  width: 100%;
+  height: 41px;
+  background: #FFFFFF;
+  border-bottom: 1px solid $main-nav-color;
+
+  a#pull {
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    &.right {
+      float: right;
+
+      li {
+        border-right: 0;
+        border-left: 1px solid $main-nav-color;
+      }
+    }
+
+    li {
+      display: inline;
+      float: left;
+      border-right: 1px solid $main-nav-color;
+
+      a {
+        display: block;
+        padding: 10px 15px;
+        font-size: 17px;
+        color: $main-nav-color - 80 ;
+      }
+
+      &:hover {
+        background: $main-nav-color + 30;
+      }
+
+      &:active {
+        box-shadow: $main-nav-color - 10 0 0 8px inset;
+      }
+    }
+  }
+}
+
+// Title of Woola
+#title {
+  text-align: center;
+  font-size: 35px;
+}
+
+// Main Panel
+.panel {
+  max-width: 618px;
+  margin: 20px auto;
+  padding: 0 5%;
+}
+
+.large-panel {
+  max-width: 1024px;
+  margin: 20px auto;
+  padding: 0 5%;
+}
+
+// Index
+#index {
+  #input-url {
+    display: block;
+    width: 100%;
+  }
+
+  #submit-url {
+    display: block;
+    margin: 0 auto;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+// Account
+#account {
+
+  form {
+    float: left;
+    width: (1/3) * 100%;
+    padding: 24px 12px;
+
+    fieldset {
+      border: 1px solid #DDDDDD;
+
+      legend {
+        margin: 0 0 5px 0;
+        padding: 5px 12px;
+        border: 1px solid #DDDDDD;
+      }
+
+      .message {
+        max-width: 100%;
+        margin: 6px auto;
+      }
+
+      input, button {
+        margin: 6px auto;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  #logout {
+    display: block;
+    width: 180px;
+    margin: auto;
+  }
+}
+
+// Login
+#login {
+  max-width: 350px;
+
+  input,
+  .message,
+  button {
+    display: block;
+    width: 100%;
+    margin: 12px auto;
+  }
+
+  .message {
+    width: 100%;
+  }
+}
+
+// Register
+#register {
+  max-width: 350px;
+
+  input,
+  .message,
+  button {
+    display: block;
+    width: 100%;
+    margin: 12px auto;
+  }
+
+  .message {
+    width: 100%;
+  }
+}
+
+// ALL TEXT INPUT KILLER
+#{$all-text-inputs} {
+  height: 30px;
+  padding: 0 5px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  box-shadow: #F3F3F3 0 1px inset;
+}
+
+#{$all-text-inputs-hover} {
+
+}
+
+#{$all-text-inputs-focus} {
+  border: {
+    color: #51A7E8;
+  }
+}
+
+// Responsive
+
+// Extra small devices
+@media (max-width: 768px) {
+  nav#top-nav {
+    border-bottom: none;
+
+    a#pull {
+      display: block;
+      width: 100%;
+      height: 41px;
+      padding: 10px 15px;
+      font-size: 17px;
+      color: $main-nav-color - 80 ;
+      background: #FFFFFF;
+      border-bottom: 1px solid $main-nav-color;
+
+      &:after {
+        float: right;
+        content: '+';
+      }
+    }
+
+    ul {
+      display: none;
+      width: 100%;
+
+      li {
+        display: block;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid $main-nav-color;
+      }
+    }
+  }
+
+  #account {
+    form {
+      width: 100%;
+    }
+  }
+}
+
+// Small devices
+@media (min-width: 768px) and (max-width: 991px) {
+    #account {
+    form {
+      width: 50%;
+    }
+  }
+}
+
+// Medium devices
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+// Large devices
+@media (min-width: 1200px) {
+
+}

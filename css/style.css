@@ -1,0 +1,229 @@
+/* Style for Woola
+ * Created by Perry Du
+ * I love this project! */
+.button-default {
+  padding: 4px 12px;
+  color: #333333;
+  border: 1px solid #dbdbdb;
+  border-bottom: 1px solid #c7c7c7;
+  border-radius: 4px;
+  box-shadow: #f3f3f3 0 1px inset;
+  background-color: #f9f9f9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #eaeaea));
+  background-image: -webkit-linear-gradient(#f9f9f9, #eaeaea);
+  background-image: linear-gradient(#f9f9f9, #eaeaea); }
+  .button-default:hover {
+    background-color: #efefef;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efefef), color-stop(100%, #e0e0e0));
+    background-image: -webkit-linear-gradient(#efefef, #e0e0e0);
+    background-image: linear-gradient(#efefef, #e0e0e0); }
+  .button-default:active {
+    box-shadow: #c2c2c2 0 2px 5px inset; }
+
+.button-normal {
+  padding: 4px 12px;
+  color: white;
+  border: 1px solid #67ba4a;
+  border-bottom: 1px solid #53a636;
+  border-radius: 4px;
+  box-shadow: #7fd262 0 1px inset;
+  background-color: #85d868;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #85d868), color-stop(100%, #76c959));
+  background-image: -webkit-linear-gradient(#85d868, #76c959);
+  background-image: linear-gradient(#85d868, #76c959); }
+  .button-normal:hover {
+    background-color: #7bce5e;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7bce5e), color-stop(100%, #6cbf4f));
+    background-image: -webkit-linear-gradient(#7bce5e, #6cbf4f);
+    background-image: linear-gradient(#7bce5e, #6cbf4f); }
+  .button-normal:active {
+    box-shadow: #4ea131 0 2px 5px inset; }
+
+.button-danger {
+  padding: 4px 12px;
+  color: white;
+  border: 1px solid #bd403a;
+  border-bottom: 1px solid #a92c26;
+  border-radius: 4px;
+  box-shadow: #d55852 0 1px inset;
+  background-color: #db5e58;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #db5e58), color-stop(100%, #cc4f49));
+  background-image: -webkit-linear-gradient(#db5e58, #cc4f49);
+  background-image: linear-gradient(#db5e58, #cc4f49); }
+  .button-danger:hover {
+    background-color: #d1544e;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d1544e), color-stop(100%, #c2453f));
+    background-image: -webkit-linear-gradient(#d1544e, #c2453f);
+    background-image: linear-gradient(#d1544e, #c2453f); }
+  .button-danger:active {
+    box-shadow: #a42721 0 2px 5px inset; }
+
+.message {
+  display: block;
+  padding: 5px 10px; }
+
+.message-error {
+  color: #ee6644;
+  border: 3px solid #ee6644; }
+
+.message-success {
+  color: #62af3a;
+  border: 3px solid #62af3a; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
+
+#wrapper {
+  max-width: 1024px;
+  margin: 70px auto;
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #333333;
+  text-decoration: none; }
+
+nav#top-nav {
+  width: 100%;
+  height: 41px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #dbdbdb; }
+  nav#top-nav a#pull {
+    display: none; }
+  nav#top-nav ul {
+    margin: 0;
+    padding: 0; }
+    nav#top-nav ul.right {
+      float: right; }
+      nav#top-nav ul.right li {
+        border-right: 0;
+        border-left: 1px solid #dbdbdb; }
+    nav#top-nav ul li {
+      display: inline;
+      float: left;
+      border-right: 1px solid #dbdbdb; }
+      nav#top-nav ul li a {
+        display: block;
+        padding: 10px 15px;
+        font-size: 17px;
+        color: #8b8b8b; }
+      nav#top-nav ul li:hover {
+        background: #f9f9f9; }
+      nav#top-nav ul li:active {
+        box-shadow: #d1d1d1 0 0 8px inset; }
+
+#title {
+  text-align: center;
+  font-size: 35px; }
+
+.panel {
+  max-width: 618px;
+  margin: 20px auto;
+  padding: 0 5%; }
+
+.large-panel {
+  max-width: 1024px;
+  margin: 20px auto;
+  padding: 0 5%; }
+
+#index #input-url {
+  display: block;
+  width: 100%; }
+#index #submit-url {
+  display: block;
+  margin: 0 auto;
+  border-top: 0;
+  border-radius: 0 0 4px 4px; }
+
+#account form {
+  float: left;
+  width: 33.33333%;
+  padding: 24px 12px; }
+  #account form fieldset {
+    border: 1px solid #DDDDDD; }
+    #account form fieldset legend {
+      margin: 0 0 5px 0;
+      padding: 5px 12px;
+      border: 1px solid #DDDDDD; }
+    #account form fieldset .message {
+      max-width: 100%;
+      margin: 6px auto; }
+    #account form fieldset input, #account form fieldset button {
+      margin: 6px auto; }
+    #account form fieldset input {
+      width: 100%; }
+#account #logout {
+  display: block;
+  width: 180px;
+  margin: auto; }
+
+#login {
+  max-width: 350px; }
+  #login input,
+  #login .message,
+  #login button {
+    display: block;
+    width: 100%;
+    margin: 12px auto; }
+  #login .message {
+    width: 100%; }
+
+#register {
+  max-width: 350px; }
+  #register input,
+  #register .message,
+  #register button {
+    display: block;
+    width: 100%;
+    margin: 12px auto; }
+  #register .message {
+    width: 100%; }
+
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
+  height: 30px;
+  padding: 0 5px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  box-shadow: #F3F3F3 0 1px inset; }
+
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus {
+  border-color: #51A7E8; }
+
+@media (max-width: 768px) {
+  nav#top-nav {
+    border-bottom: none; }
+    nav#top-nav a#pull {
+      display: block;
+      width: 100%;
+      height: 41px;
+      padding: 10px 15px;
+      font-size: 17px;
+      color: #8b8b8b;
+      background: #FFFFFF;
+      border-bottom: 1px solid #dbdbdb; }
+      nav#top-nav a#pull:after {
+        float: right;
+        content: '+'; }
+    nav#top-nav ul {
+      display: none;
+      width: 100%; }
+      nav#top-nav ul li {
+        display: block;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #dbdbdb; }
+
+  #account form {
+    width: 100%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  #account form {
+    width: 50%; } }
